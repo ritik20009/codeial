@@ -17,6 +17,20 @@ module.exports.create = async function(req,res){
             req.flash('success', 'comment posted');
             post.comments.push(comment);
             post.save();
+
+            if (req.xhr){
+                // Similar for comments to fetch the user's id!
+                comment = await comment.populate('user', 'name').execPopulate();
+    
+                return res.status(200).json({
+                    data: {
+                        comment: comment
+                    },
+                    message: "Post created!"
+                });
+            }
+
+            req.flash('success', 'comment posted');
             res.redirect('/');  
         }
     }catch(err){
@@ -34,9 +48,9 @@ module.exports.destroy = async function(req,res){
             let postid = comment.post;
 
             comment.remove();
-            req.flash('succes', 'comment deleted');
 
-
+            req.flash('success','comment deleted');
+            
             let post =  await Post.findByIdAndUpdate(postid, { $pull: {comments: req.params.id}});
 
             return res.redirect('back');
