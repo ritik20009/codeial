@@ -1,11 +1,16 @@
 #home-container{
 
     display: flex;
+    ::-webkit-scrollbar{
+        display:none;
+    }
     #feed-posts{
 
         width: 70%;
-        height: 90%;
+        height: 80vh;
         padding: 10px;
+        overflow: scroll;
+        overflow-x: hidden;
     }
 
 
