@@ -1,4 +1,38 @@
-<h1>Sign Up</h1>
+<link rel="stylesheet" href="/css/signup.css">
+
+
+<div class="create">
+    <div class="first-half">
+        <div class="signin-box">
+            <h1>Create Your Account</h1>
+            <div class="social">
+                <a href="/users/auth/google">Sign Up with google</a>
+            </div>
+            <div class="or">
+                <p>OR</p>
+            </div>
+            <div class="fill">
+                <form action="/users/create" method="POST">
+                    <div class="input">
+                        <input  type="name" name="name" placeholder="Your Name"  required>
+                    </div>
+                    <div class="input">
+                        <input  type="email" name="email" placeholder="Your Email"  required>
+                    </div>
+                    <div class="input">
+                        <input  type="password" name="password" placeholder="Password"  required>
+                    </div>
+                    <div class="input">
+                        <input  type="password" name="confirm_password" placeholder="Confirm Password"  required>
+                    </div>
+                    <div class="btn">
+                        <input  type="submit" value="Sign Up">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<!-- <h1>Sign Up</h1>
 
 <form action="/users/create" method="POST">
     <input type="text" name="name" placeholder="Your Name" required>
@@ -11,4 +45,4 @@
 
 <p>
     <a href="/users/auth/google">Sign In/Sign Up with google</a>
-</p>
+</p> -->

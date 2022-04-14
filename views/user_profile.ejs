@@ -11,4 +11,18 @@
 <%} else { %>
     <p><%= profile_user.name %></p>
     <p><%= profile_user.email %></p>
+
+    <p>
+        <% if(friendOrNot) { %>
+            <form action="/friendship/addfriend" method="POST">
+                <input type="hidden" name="friendUserId" value="<%=profile_user.id %>">
+                <input type="submit" value="UnFriend">
+            </form>
+        <%}else { %>
+            <form action="/friendship/addfriend" method="POST">
+                <input type="hidden" name="friendUserId", value="<%=profile_user.id %>">
+                <input type="submit" value="Add Friend">
+            </form>
+        <% } %>
+    </p>
 <%} %>

@@ -1,20 +1,46 @@
 <link rel="stylesheet" href="/css/signin.css">
-<div class="signin-box">
-    <h1>Sign In</h1>
 
-    <form action="/users/create-session" method="POST">
-        <div class="input">
-            <input  type="email" name="email" placeholder="Email"  required>
+<div class="login">
+    <div class="first-half">
+        <div class="signin-box">
+            <h1>Login to Your Account</h1>
+            <div class="social">
+                <a href="/users/auth/google">Sign In with google</a>
+            </div>
+            <div class="or">
+                <p>OR</p>
+            </div>
+            <div class="fill">
+                <form action="/users/create-session" method="POST">
+                    <div class="input">
+                        <input  type="email" name="email" placeholder="Email"  required>
+                    </div>
+                    <div class="input">
+                        <input  type="password" name="password" placeholder="Password"  required>
+                    </div>
+                    <div class="btn">
+                        <input  type="submit" value="Sign In">
+                    </div>
+                </form>
+            </div>
+            <div class="link">
+                <a href="/users/sign-up">Create New Account</a>
+            </div>
         </div>
-        <div class="input">
-            <input  type="password" name="password" placeholder="Password"  required>
+    </div>
+    <!-- <div class="other-half">
+        <div class="signup-link">
+            <h1>
+                New Here?
+            </h1>
+            <div class="desc">
+                <p>
+                    sign up enter in our world
+                </p>
+            </div>
+            <div class="link">
+                <a href="/users/sign-up"> Sign Up</a>
+            </div>
         </div>
-        <div class="input">
-            <input  type="submit" value="Sign In">
-        </div>
-    </form>
-
-    <p>
-        <a href="/users/auth/google">Sign In/Sign Up with google</a>
-    </p>
+    </div>  -->
 </div>

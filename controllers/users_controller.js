@@ -1,13 +1,18 @@
 const User = require('../models/user');
 const fs = require('fs');
 const path = require('path');
+const Friendship = require('../models/friendship');
 
-module.exports.profile = function(req, res){
-    User.findById(req.params.id, function(err, user){
-        return res.render('user_profile', {
-            title: 'User Profile',
-            profile_user: user
-        });
+module.exports.profile = async function(req, res){
+
+    let user = await User.findById(req.params.id);
+    let isfriendOrNot = await User.findById(req.user.id);
+    const friendOrNot = user.friendships.find((item) => item == req.user.id);
+    
+    return res.render('user_profile', {
+        title: 'user profile',
+        profile_user: user,
+        friendOrNot: friendOrNot
     });
 
 }

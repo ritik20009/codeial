@@ -1,5 +1,6 @@
 const Post = require('../models/post');
 const User = require('../models/user');
+const Friendship = require('../models/friendship');
 
 
 
@@ -30,10 +31,22 @@ module.exports.home = async  function(req, res){
         }).populate('likes');
 
         let users = await User.find({});
+        friendshipuser = [];
+        if(req.user){
+            let listforcurrentuser = await User.findById(req.user.id);
+            for(let uid of listforcurrentuser.friendships){
+                let frienduser = await User.findById(uid);
+                friendshipuser.push(frienduser);
+            }
+        }
+        else{
+            friendshipuser = [];
+        }
         return res.render('home', {
             title: "Codeial | Home",
             posts:  posts,
-            all_users: users
+            all_users: users,
+            addedfriends: friendshipuser
         });
     }catch(err){
         console.log('Error',err);

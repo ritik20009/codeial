@@ -1,15 +1,19 @@
 #home-container {
-  display: flex; }
+  display: flex;
+  flex-direction: row; }
   #home-container ::-webkit-scrollbar {
     display: none; }
+  #home-container #others {
+    width: 20%;
+    height: 80vh; }
   #home-container #feed-posts {
-    width: 70%;
+    width: 60%;
     height: 80vh;
     padding: 10px;
     overflow: scroll;
     overflow-x: hidden; }
   #home-container #user-friends {
-    width: 30%;
+    width: 20%;
     padding: 10px;
     border-left: 2px solid lightgrey;
     height: 100%; }
