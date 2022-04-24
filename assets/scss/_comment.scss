@@ -1,0 +1,16 @@
+.comments{
+    width: 100%;
+    height: 70%;
+    .comment-content{
+        width: 100%;
+        height: auto;
+        .name{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            background-color: #ECF3FF;
+            
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/css/allusers.css">
+<h1>People You May Know</h1>
+
+<div class="users_list">
+    <% for(u of get_users){%>
+        <div class="card">
+            <%if(u.avatar){%>
+                <img src="<%=u.avatar%>" alt="<%=u.name %>">
+            <%}else{%>
+                <img src="/images/default_pic.png">
+            <%}%>
+            <div class="name">
+                <a href="/users/profile/<%=u.id %>"><%=u.name%></a>
+            </div>
+        </div>
+    <%}%>
+</div>

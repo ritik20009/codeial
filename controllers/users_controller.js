@@ -17,6 +17,16 @@ module.exports.profile = async function(req, res){
 
 }
 
+module.exports.getlist = async function(req,res){
+
+    let user = await User.find({});
+
+    return res.render('allusers',{
+        title: "list of all users",
+        get_users: user
+    });
+}
+
 module.exports.update = async function(req,res){
 
     if(req.user.id==req.params.id){

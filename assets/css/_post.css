@@ -1,0 +1,109 @@
+.post-box {
+  width: 96%;
+  height: 120%;
+  position: relative;
+  left: -7%;
+  margin-bottom: 3%;
+  overflow: scroll;
+  background-color: white;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 0px 0px 2px 2px lightgrey; }
+  .post-box .post-box-header {
+    width: 100%;
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 2%; }
+    .post-box .post-box-header img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 2%; }
+    .post-box .post-box-header p {
+      font-size: 19px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .post-box .post-box-header small {
+      margin-left: 80%;
+      margin-top: 3%;
+      font-size: 20px; }
+      .post-box .post-box-header small i {
+        color: #00cc7a; }
+  .post-box .post-content {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%; }
+    .post-box .post-content .post-text {
+      width: 100%;
+      height: 10%;
+      box-sizing: border-box;
+      padding: 2%; }
+    .post-box .post-content .post-pic {
+      width: 100%;
+      height: 90%;
+      background-image: url("../images/background.jpg");
+      background-size: cover; }
+  .post-box .likes {
+    width: 100%;
+    height: 6%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .post-box .likes a {
+      text-decoration: none;
+      color: #00cc7a;
+      font-size: 20px; }
+  .post-box .post-comments {
+    width: 100%;
+    height: 20%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column; }
+    .post-box .post-comments .comment-fill {
+      width: 100%;
+      height: 30%; }
+      .post-box .post-comments .comment-fill .comm-input {
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-left: 10%; }
+        .post-box .post-comments .comment-fill .comm-input img {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          margin-right: 2%; }
+        .post-box .post-comments .comment-fill .comm-input input {
+          width: 120%;
+          height: 80%;
+          border-radius: 38px;
+          border: 1px solid lightgrey;
+          box-shadow: 0px 0px 1px 1px lightgrey; }
+        .post-box .post-comments .comment-fill .comm-input input:hover {
+          background-color: #e4e6eb; }
+        .post-box .post-comments .comment-fill .comm-input .btn {
+          margin-left: 10px; }
+          .post-box .post-comments .comment-fill .comm-input .btn input {
+            width: 140%;
+            height: 80%;
+            color: black;
+            box-sizing: border-box;
+            padding: 2%;
+            cursor: pointer; }
+          .post-box .post-comments .comment-fill .comm-input .btn input:hover {
+            background-image: linear-gradient(45deg, #00cc7a, #66e0ff); }
+    .post-box .post-comments .post-comments-list {
+      box-sizing: border-box;
+      padding: 2%;
+      position: relative;
+      width: 100%;
+      height: 50%;
+      top: -5%; }

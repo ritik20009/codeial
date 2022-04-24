@@ -3,11 +3,12 @@
   bottom: 10px;
   right: 10px;
   border: 1px dashed grey;
-  height: 350px;
-  width: 300px;
+  height: 0px;
+  width: 0px;
   background: white;
   padding: 5px;
-  box-shadow: 1px 1px 1px 1px lightgrey; }
+  box-shadow: 1px 1px 1px 1px lightgrey;
+  transition: all 0.0002s ease-in-out; }
   #user-chat-box #chat-messages-list {
     list-style: none;
     padding: 10px;
@@ -43,3 +44,7 @@
       color: white;
       border: none;
       background: #58d258; }
+
+#user-chat-box:target {
+  height: 350px;
+  width: 300px; }

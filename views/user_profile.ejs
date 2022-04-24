@@ -1,28 +1,45 @@
 <link rel="stylesheet" href="/css/user_profile.css">
 
-<img src="<%=user.avatar %>" alt="<%=user.name %>" width="100">
-<% if(user.id==profile_user.id) {%>
-    <form action="/users/update/<%=profile_user.id %>" enctype="multipart/form-data" method="POST">
-        <input type="text" name="name" placeholder="your name" value="<%=profile_user.name %>" required>
-        <input type="email" name="email" placeholder="your email" value="<%=profile_user.email %>" required>
-        <input type="file" name="avatar" placeholder="Profile Picture">
-        <input type="submit" value="update">
-    </form>
-<%} else { %>
-    <p><%= profile_user.name %></p>
-    <p><%= profile_user.email %></p>
+<%if(profile_user.avatar) {%>
+    <img src="<%=profile_user.avatar %>" alt="<%=profile_user.name %>" width="100">
+<%}else{%>
+        img src="/images/default_pic.png">
+<%}%>
 
-    <p>
-        <% if(friendOrNot) { %>
-            <form action="/friendship/addfriend" method="POST">
-                <input type="hidden" name="friendUserId" value="<%=profile_user.id %>">
-                <input type="submit" value="UnFriend">
-            </form>
-        <%}else { %>
-            <form action="/friendship/addfriend" method="POST">
-                <input type="hidden" name="friendUserId", value="<%=profile_user.id %>">
-                <input type="submit" value="Add Friend">
-            </form>
-        <% } %>
-    </p>
-<%} %>
+<div class="fill">
+    <% if(user.id==profile_user.id) {%>
+        <form action="/users/update/<%=profile_user.id %>" enctype="multipart/form-data" method="POST">
+            <input type="text" name="name" placeholder="your name" value="<%=profile_user.name %>" required>
+            <input type="email" name="email" placeholder="your email" value="<%=profile_user.email %>" required>
+            <input type="file" name="avatar" placeholder="Profile Picture">
+            <div class="btn">
+                <input type="submit" value="update">
+            </div>
+        </form>
+</div>
+<div class="info">
+    <%} else { %>
+    <div class="name">
+        <p><%= profile_user.name %></p>
+    </div>
+    <div class="email">
+        <p><%= profile_user.email %></p>
+    </div>
+
+    <div class="btn">
+        <p>
+            <% if(friendOrNot) { %>
+                <form action="/friendship/addfriend" method="POST">
+                    <input type="hidden" name="friendUserId" value="<%=profile_user.id %>">
+                    <input type="submit" value="UnFriend">
+                </form>
+            <%}else { %>
+                <form action="/friendship/addfriend" method="POST">
+                    <input type="hidden" name="friendUserId", value="<%=profile_user.id %>">
+                    <input type="submit" value="Add Friend">
+                </form>
+            <% } %>
+        </p>
+    </div>
+    <%} %>
+</div>

@@ -1,17 +1,18 @@
-<li>
+<li id="comment-<%= comment._id %>">
     <p>
-        <% if((locals.user && locals.user.id==comment.user.id) || locals.user && locals.user.id==post.user.id) {%>
-            <small>
-                <a href="/comments/destroy/<%= comment.id %>">X</a>
-            </small>
-        <%}%>
-        <%=comment.content %>
+        <% if (locals.user && locals.user.id == comment.user.id){ %>
+        
+        <small>
+            <a class="delete-comment-button" href="/comments/destroy/<%= comment.id %>">X</a>
+        </small>
+        <% } %>
+        <%= comment.content %>
         <br>
         <small>
-            <%=comment.user.name %>
+            <%= comment.user.name %>
         </small>
-
-        <!-- display the likes of this comment, if the user is logged in, then show the link to toggle likes, else, just show the count -->
+        <!-- CHANGE :: display the likes of this comment, if the user is logged in, then show the link to toggle likes, else, just show the count -->
+        <!-- study about the data attribute -->
         <small>
             <% if (locals.user){ %>
                 <a class="toggle-like-button" data-likes="<%= comment.likes.length %>" href="/likes/toggle/?id=<%=comment._id%>&type=Comment">
@@ -21,5 +22,7 @@
                 <%= comment.likes.length %> Likes
             <% } %>
         </small>
-    </p>
+
+    </p>    
+
 </li>

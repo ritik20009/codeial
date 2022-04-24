@@ -1,16 +1,30 @@
-
-
 <div class="container">
     <div class="head">
-        CODEIAL
+        <a href="/">CODEIAL</a>
     </div>
     <div class="links">
         <% if(locals.user) { %>
-            <a href="/users/profile/<%=user.id %>"><%=user.name %></a>
-            <a href="/users/sign-out">sign out</a>
+                <div class="user">
+                    <a href="/users/profile/<%=user.id %>">
+                        <%if(user.avatar) {%>
+                            <img src="<%=user.avatar %>" alt="<%=user.name %>">
+                        <%}else{%>
+                            <img src="/images/default_pic.png">
+                        <%}%>
+                    </a>
+                    <span class="name">
+                        <a href="/users/profile/<%=user.id %>"><%=user.name%></a>
+                    </span>
+                </div>
+                <div class="logout">
+                    <a href="/users/sign-out">sign out</a>
+                </div>
+            </div>
         <% } else { %>
-            <a href="/users/sign-in">sign in</a>
-            <a href="/users/sign-up">sign up</a>
+            <div class="login">
+                <a href="/users/sign-in">sign in</a>
+                <a href="/users/sign-up">sign up</a>
+            </div>
         <% } %>
     </div>
 </div>
