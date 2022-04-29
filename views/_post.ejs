@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/_post.css">
+<link rel="stylesheet" href="<%= assetPath('css/_post.css') %>">
 <li id="post-<%= post._id %>">
 
     <div class="post-box">
@@ -49,13 +49,10 @@
                         </div>
                     </form>
                 </div>
-
             <% } %>
-
                 <div class="post-comments-list">
                     <ul id="post-comments-<%= post._id %>">
                         <% for (comment of post.comments){%>
-
                             <%- include('_comment') -%>
                             
                         

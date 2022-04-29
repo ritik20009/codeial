@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="/css/home.css">
-<link rel="stylesheet" href="/css/chat_box.css">
+<link rel="stylesheet" href="<%= assetPath('css/home.css') %>">
+<link rel="stylesheet" href="<%= assetPath('css/chat_box.css') %>">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 <% if(locals.user){ %>
@@ -58,7 +58,6 @@
                         <input type="submit" value="Post">
                     </div>
                 </form>
-
             </div>
                 
             <div id="posts-list-container">
@@ -88,9 +87,7 @@
                     </div>
                 <% } %>
             </div>
-
             <!-- <h4>Users</h4>
-
             <% for(u of all_users) {%>
                  for displaying user profile link 
                 <p>           
@@ -116,20 +113,17 @@
 					</span>
 					
 				</li>
-
 			</ul>
 			<div id="chat-message-input-container">
 				<input id="chat-message-input" placeholder="Type message here">
 				<button id="send-message">Send</button>
 			</div>
-
 		</div>
 	</div>
 <% } %>
-
     </div>
     <% } else { %>
-        <link rel="stylesheet" href="/css/signin.css">
+        <link rel="stylesheet" href="<%= assetPath('css/signin.css') %>">
         <div class="login">
             <div class="first-half">
                 <div class="signin-box">
@@ -154,33 +148,28 @@
                         </form>
                     </div>
                     <div class="link">
-                        <a href="/users/sign-up">Create New Account</a>
+                        <a href="<%= assetPath('css/signup.css') %>">Create New Account</a>
                     </div>
                 </div>
             </div>
         </div>
     <%}%>
 <!-- importing this script for creating the comments -->
-<script src="/js/home_post_comments.js" ></script>
-<script src="/js/home_posts.js"></script>
-
+<script src="<%= assetPath('js/home_post_comments.js') %>" ></script>
+<script src="<%= assetPath('js/home_posts.js') %>"></script>
 <!-- import the script file for toggle likes, also run it over for the already present posts and comments on the page -->
-<script src="js/toggle_likes.js"></script>
+<script src="<%= assetPath('js/toggle_likes.js') %>"></script>
 <script>
     $('.toggle-like-button').each(function(){
         let self = this;
         let toggleLike = new ToggleLike(self);
     });
 </script>
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>console.log("/js/chat_engine.js")</script>   
-<script src="/js/chat_engine.js"></script>
-
+<!---<script>console.log("/js/chat_engine.js")</script> --->   
+<script src="<%= assetPath('js/chat_engine.js') %>"></script>
 <% if (locals.user) { %>
 <script>
   new ChatEngine('user-chat-box','<%=locals.user.email%>')
 </script>
 <% } %>
-
