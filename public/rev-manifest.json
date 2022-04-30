@@ -9,5 +9,12 @@
   "css/layout.css": "css/layout-ad7fced993.css",
   "css/signin.css": "css/signin-c3dc0033f6.css",
   "css/signup.css": "css/signup-a9d6a8ee2d.css",
-  "css/user_profile.css": "css/user_profile-6c754ac845.css"
+  "css/user_profile.css": "css/user_profile-6c754ac845.css",
+  "js/chat_engine.js": "js/chat_engine-d497daed7f.js",
+  "js/home_post_comments.js":"js/home_post_comments-17d4d4c772.js",
+  "js/home_posts.js": "js/home_posts-1a633d8412.js",
+  "js/toggle_likes.js": "js/toggle_likes-0e3d81481c.js",
+  "images/back_image.jpg": "images/back_image-38b12da21c.jpg",
+  "images/background.jpg": "images/background-57f93c17a4.jpg",
+  "images/default_pic.png": "images/default_pic-51d5024eb0.png"
 }

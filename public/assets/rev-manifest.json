@@ -12,5 +12,9 @@
   "css/user_profile.css": "css/user_profile-6c754ac845.css",
   "images/back_image.jpg": "images/back_image-38b12da21c.jpg",
   "images/background.jpg": "images/background-57f93c17a4.jpg",
-  "images/default_pic.png": "images/default_pic-51d5024eb0.png"
+  "images/default_pic.png": "images/default_pic-51d5024eb0.png",
+  "js/chat_engine.js": "js/chat_engine-d497daed7f.js",
+  "js/home_post_comments.js": "js/home_post_comments-17d4d4c772.js",
+  "js/home_posts.js": "js/home_posts-1a633d8412.js",
+  "js/toggle_likes.js": "js/toggle_likes-0e3d81481c.js"
 }
