@@ -94,7 +94,7 @@ app.use(customMware.setFlash);
 app.use('/', require('./routes'));
 
 
-app.listen(process.env.PORT, function(err){
+app.listen(port, function(err){
     if (err){
         console.log(`Error in running the server: ${err}`);
     }
