@@ -6,6 +6,8 @@ In this project we have used express.js and it's libraries to implement the func
 
 Major frameworks and languages used are - Node.js, Express.js, Javascript, HTML, CSS.
 
+To run this you need to create your virtual enviroment and then install the required things.
+
 <h2>You can also download the video (Untitled.mp4) of this project form the main page of this repo.</h2>
 
 <h2>Here are some of the screenshots for the reference.</h2>
